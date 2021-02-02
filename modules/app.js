@@ -139,6 +139,7 @@ favsLoad = () => { // loading favorites from LS function
     if (loadedShows === null) {
 this.emptyFavsMessage()
 setTimeout(this.hideMessage, 4000);
+        let showIdsArray = [];
     } else {
         let showIdsArray = loadedShows.map( show => show.showId);
         let iterableArray = [];
