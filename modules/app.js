@@ -126,10 +126,11 @@ localStorage.setItem('showID', JSON.stringify(storage));
 
 favsCheck = (id) => { // check is current ID is saved in LS
     let loadedShows = JSON.parse(localStorage.getItem('showID')); 
+    if (loadedShows.length > 0) {
     let showIdsArray = loadedShows.map( show => show.showId);
     let index = showIdsArray.includes(id);
     return index;
-}
+    }
 
 favsLoad = () => { // loading favorites from LS function
         this.viewElems.showsWrapper.innerHTML = ""
