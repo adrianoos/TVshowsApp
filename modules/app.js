@@ -131,6 +131,7 @@ favsCheck = (id) => { // check is current ID is saved in LS
     let index = showIdsArray.includes(id);
     return index;
     }
+};
 
 favsLoad = () => { // loading favorites from LS function
         this.viewElems.showsWrapper.innerHTML = ""
