@@ -136,6 +136,10 @@ favsCheck = (id) => { // check is current ID is saved in LS
 favsLoad = () => { // loading favorites from LS function
         this.viewElems.showsWrapper.innerHTML = ""
         let loadedShows = JSON.parse(localStorage.getItem('showID')); 
+    if (loadedShows === null) {
+this.emptyFavsMessage()
+setTimeout(this.hideMessage, 4000);
+    } else {
         let showIdsArray = loadedShows.map( show => show.showId);
         let iterableArray = [];
         for ( const show of showIdsArray) { 
@@ -143,6 +147,7 @@ favsLoad = () => { // loading favorites from LS function
             promise1.then(iterableArray.push(promise1))
             }
     return iterableArray;
+}
     };
 
 renderfav = show => { // rendering loaded shows from LS on cards
