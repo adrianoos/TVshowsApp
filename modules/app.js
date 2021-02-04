@@ -262,6 +262,15 @@ if (show.summary) {
     p = createDOMElem('p', 'card-text', 'There is no summary for this Show yet')
 }
 
+let h6; // create of h5 depends on availability of data
+if (show.network === null) {
+    h6 = createDOMElem('h6', 'card-subtitle mb-2 text-muted', "country unknown")
+} else {
+    h6 = createDOMElem('h6', 'card-subtitle mb-2 text-muted', show.network.country.name)
+}
+
+
+
 if (isDetailed) {
     btn.addEventListener('click', this.closeDetailsView)
     btn.innerText = "Back"
@@ -288,7 +297,6 @@ if (checker === false) {
 
 }
 
-
 btn.dataset.showId = show.id
 btn2.dataset.showId = show.id
 btn3.dataset.showId = show.id
@@ -296,6 +304,7 @@ btn.addEventListener('click', this.closeDetailsView)
 divCard.appendChild(divCardBody)
 divCardBody.appendChild(img)
 divCardBody.appendChild(h5)
+divCardBody.appendChild(h6)
 divCardBody.appendChild(p)
 divCardBody.appendChild(btn)
 divCardBody.appendChild(btn2)
@@ -303,6 +312,7 @@ divCardBody.appendChild(btn3)
 return divCard;
 
 };
+
 
 }; // end of AppClass
 
