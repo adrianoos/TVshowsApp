@@ -29,7 +29,7 @@ body {
   justify-content: space-around;
 }
 
-.shows-wrapper { /*karta zbierająca pojedyńcze seriale w głównym widoku*/
+.shows-wrapper {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -37,7 +37,7 @@ body {
 
 .shows-wrapper .card { /* showCards */
   width: 24%;
-  height: 530px;
+  height: 550px;
   margin-bottom: 1.5%;
   box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.3);
   margin: 0.5%;
@@ -57,13 +57,13 @@ body {
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
 }
 
-.show-preview .card { /* widok detali górna część*/
+.show-preview .card { 
   height: 100%;
   display: flex;
   justify-content: space-around;
   
 }
-.show-preview .card-body { /* widok detali górna część*/
+.show-preview .card-body { 
   align-items: center;
 }
 
@@ -74,8 +74,8 @@ body {
   background-size: cover;
 }
 #searchButton {
-  background-color: rgb(116, 129, 245); /*kolo tła przycisku*/
-  color: aliceblue; /*kolor dla czcionki*/
+  background-color: rgb(116, 129, 245); 
+  color: aliceblue; 
   box-shadow:  5px 5px 20px rgb(151, 151, 151);
 }
 #Favs {
