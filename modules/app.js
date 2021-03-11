@@ -74,7 +74,7 @@ this.viewElems.showsWrapper.innerHTML = ""
 for (const {show} of shows) { 
 const card = this.createShowCard(show)
 this.viewElems.showsWrapper.appendChild(card) 
-this.showsSet = show; 
+this.showsSet = show;
 }
 }
 
@@ -139,7 +139,7 @@ favsLoad = () => { // loading favorites from LS function
     if (loadedShows === null) {
 this.emptyFavsMessage()
 setTimeout(this.hideMessage, 4000);
-        let showIdsArray = [];
+let showIdsArray = [];
     } else {
         let showIdsArray = loadedShows.map( show => show.showId);
         let iterableArray = [];
@@ -154,7 +154,7 @@ setTimeout(this.hideMessage, 4000);
 renderfav = show => { // rendering loaded shows from LS on cards
             Array.from( document.querySelectorAll('[data-show-id]')).forEach(btn => btn.removeEventListener('click', this.openDetailsView)) 
             const iterArray = this.favsLoad()
-            if (iterArray.length === 0) {
+            if (iterArray.length === 0 ) {
                 this.emptyFavsMessage()
                 setTimeout(this.hideMessage, 4000);
             }
@@ -182,6 +182,12 @@ removeFav = () => { // removing favorites shows from Local Storage
 this.nonExistMessage();
 setTimeout(this.hideMessage ,3000);
         }
+        this.viewElems.showPreview.style.display = "none"
+        this.viewElems.showsWrapper.style.display = "flex"
+        this.viewElems.label1.style.display = "flex"
+        this.viewElems.InputFields.style.display = "flex"
+        this.viewElems.keywords.style.display = "flex"
+        this.viewElems.showPreview.innerHTML = ""
 };
  
 closeDetailsView = event => { // changing view from details to general
@@ -223,7 +229,7 @@ replaceAll = (str, map) => { // cleaning downloaded shows description from html 
     return str;
 };
     
-createShowCard = (show, isDetailed) => { // creating div card for each show function
+createShowCard = (show, isDetailed) => { // creating div card for each show
 const divCard = createDOMElem('div', 'card')
 const divCardBody = createDOMElem('div', 'card-body')
 const h5 = createDOMElem('h5', 'card-title', show.name)
@@ -269,13 +275,15 @@ if (show.network === null) {
     h6 = createDOMElem('h6', 'card-subtitle mb-2 text-muted', show.network.country.name)
 }
 
-
-
 if (isDetailed) {
     btn.addEventListener('click', this.closeDetailsView)
     btn.innerText = "Back"
-    btn2.style.visibility = "hidden"
-    btn3.style.visibility = "hidden"
+    btn2.style.visibility = "visible"
+    btn2.style.left = "-50px"
+    btn2.addEventListener('click', this.addToFav);
+    btn3.style.visibility = "visible"
+    btn3.style.left = "40px"
+    btn3.addEventListener('click', this.removeFav);
    
 } else {
     btn.addEventListener('click', this.openDetailsView);
@@ -294,7 +302,6 @@ if (checker) {
 
 if (checker === false) {
     btn3.style.visibility = "hidden"
-
 }
 
 btn.dataset.showId = show.id
@@ -302,6 +309,7 @@ btn2.dataset.showId = show.id
 btn3.dataset.showId = show.id
 btn.addEventListener('click', this.closeDetailsView)
 divCard.appendChild(divCardBody)
+divCard.appendChild(this.viewElems.popUp)
 divCardBody.appendChild(img)
 divCardBody.appendChild(h5)
 divCardBody.appendChild(h6)
@@ -313,7 +321,6 @@ return divCard;
 
 };
 
-
 }; // end of AppClass
 
-document.addEventListener('DOMContentLoaded', new Tvapp()); // loading function
+document.addEventListener('DOMContentLoaded', new Tvapp());
