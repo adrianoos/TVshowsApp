@@ -30,9 +30,15 @@ body {
 }
 
 .shows-wrapper {
+  position: absolute;
+  left: 10vw;
+  top:55vh;
+  max-width: 80%;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .shows-wrapper .card { /* showCards */
@@ -94,13 +100,11 @@ body {
 
 #favBtn { /*add to favs button*/
   position:absolute;
-  left: 9px;
-  bottom: 10px;
   background-color: white;
   color: blue;
   margin-left: 120px;
-  
 }
+
 #fav2Btn { /*remove from favs button*/
   position: absolute;
   left: 100px;
@@ -112,13 +116,12 @@ body {
 #searchInput {
   box-shadow:  5px 5px 20px rgb(151, 151, 151);
 }
-#dropdownMenuButton {
-  box-shadow:  5px 5px 20px rgb(151, 151, 151);
+#favbtns { /**/
   position: absolute;
-  left: 95px;
-  bottom: 1px;
-  height: 39px;
+ 
 }
+
+
 .form-control {
   width: 1vw;
 }
@@ -161,7 +164,7 @@ body {
   }
   .shows-wrapper .card { /* showCards */
     width: 70vw;
-    height: 70vw;
+    height: 82vw;
     margin-bottom: 1.5%;
     box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.3);
     margin: 0.5%;
@@ -172,6 +175,18 @@ body {
   }
   #InputFields {
     width: 70vw;
+  }
+  .dropdown {
+    position: absolute;
+    top: 31vh;
+    left: 13vw;
+  }
+  #dropdownMenuButton {
+    box-shadow:  5px 5px 20px rgb(151, 151, 151);
+    position: absolute;
+    left: 14vw;
+    bottom: 1px;
+    height: 39px;
   }
   
   .shows-wrapper>* {
