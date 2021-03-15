@@ -69,6 +69,7 @@ searchBtnClick = () => {
         this.errorHandle();
     } 
   });
+     this.clearInput();
 };
 
 errorHandle = () => { // message function empty response from API
