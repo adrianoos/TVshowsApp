@@ -29,7 +29,7 @@ setupListeners = () => { // setup listeners for usable buttons
 Object.keys(this.showNameButtons).forEach(showName => { 
     this.showNameButtons[showName].addEventListener('click', this.setCurrentNameFilter)
 })
-this.viewElems.searchButton.addEventListener('keydown', this.handleSubmit);
+this.viewElems.searchButton.addEventListener('keydown', this.searchBtnClick);
 this.viewElems.searchInput.addEventListener('keydown', this.handleSubmit);
 this.viewElems.Favs.addEventListener('click', this.renderfav);
 }
@@ -59,7 +59,17 @@ handleSubmit = () => { // handling function for search input
     });
       this.clearInput();
   }
-}
+};
+
+searchBtnClick = () => {
+    let query = this.viewElems.searchInput.value; 
+    getShowsByKey(query).then(shows => {if (shows.length > 0) { 
+        this.renderCardsOnList(shows);
+    } else {
+        this.errorHandle();
+    } 
+  });
+};
 
 
 errorHandle = () => { // message function empty response from API
