@@ -29,10 +29,10 @@ setupListeners = () => { // setup listeners for usable buttons
 Object.keys(this.showNameButtons).forEach(showName => { 
     this.showNameButtons[showName].addEventListener('click', this.setCurrentNameFilter)
 })
-this.viewElems.searchButton.addEventListener('keydown', this.searchBtnClick);
+this.viewElems.searchButton.addEventListener('click', this.searchBtnClick);
 this.viewElems.searchInput.addEventListener('keydown', this.handleSubmit);
 this.viewElems.Favs.addEventListener('click', this.renderfav);
-}
+};
 
 setCurrentNameFilter = () => { // execution of selected keywords
     this.selectedName = event.target.dataset.showName;
@@ -70,7 +70,6 @@ searchBtnClick = () => {
     } 
   });
 };
-
 
 errorHandle = () => { // message function empty response from API
 this.viewElems.label1.innerText = "Error";
