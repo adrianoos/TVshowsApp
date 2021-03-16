@@ -231,5 +231,8 @@ body {
     word-wrap: wrap;
     font-size: 2vw;
   }
+  #label1{
+    font-size: 10vw;
+  }
   
 };
