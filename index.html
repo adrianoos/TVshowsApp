@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="./TvApp.css">
   <link rel="shortcut icon" href="favs.ico">
@@ -10,37 +11,39 @@
 </head>
 <body>
   <div class="container" id="MainContainer">
-    <div id="square">
-    </div>
+    <div id="popUp"></div>
+    <div id="square"> </div>
     <label id="label1" class="" for="searchInput">TV Shows Base</label>
     <div class="input-group mb-3" id="InputFields">
       <button class="btn btn-outline-secondary" type="button" id="searchButton">Search</button>
       <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="searchButton" id="searchInput">
     </div>
-    <div class="search-bar" id="searchView">
-      <div class="dropdown" id="keywords">
-        <button class="btn btn-primary" type="button" id="Favs" aria-haspopup="true" aria-expanded="false">
-          Favorites
-        </button>
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Popular keywords
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <button class="dropdown-item" data-show-name="Comedy">Comedy</button> 
-          <button class="dropdown-item" data-show-name="Game">Game</button>
-          <button class="dropdown-item" data-show-name="Lupin">Lupin</button>
-          <button class="dropdown-item" data-show-name="detective">Detective</button>
-          <button class="dropdown-item" data-show-name="HBO">HBO</button>
-          <button class="dropdown-item" data-show-name="NETFLIX">NETFLIX</button>
-        </div>
-      </div>
+ <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+         <button type="button" id="Favs" class="btn btn-secondary">
+            Favorites
+         </button>
+              <div class="btn-group" id="btnGroup" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   Popular keywords
+                 </button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+      <button class="dropdown-item" data-show-name="Comedy">Comedy</button> 
+      <button class="dropdown-item" data-show-name="Game">Game</button>
+      <button class="dropdown-item" data-show-name="Lupin">Lupin</button>
+      <button class="dropdown-item" data-show-name="detective">Detective</button>
+      <button class="dropdown-item" data-show-name="HBO">HBO</button>
+      <button class="dropdown-item" data-show-name="NETFLIX">NETFLIX</button>
     </div>
+  </div>
+ </div>
+
+
     <div class="show-preview" id="showPreview">
     </div>
     <div class="shows-wrapper" id="showsWrapper">
     </div>
   </div>
-  <div id="popUp"></div>
+  
   <script src="./modules/app.js" type="module"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
