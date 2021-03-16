@@ -69,7 +69,7 @@ searchBtnClick = () => {
         this.errorHandle();
     } 
   });
-     this.clearInput();
+  this.clearInput();
 };
 
 errorHandle = () => { // message function empty response from API
@@ -170,7 +170,7 @@ renderfav = show => { // rendering loaded shows from LS on cards
             }
             for ( const show of iterArray) {
                 show.then( show => { 
-                    const card = this.createShowCard(show)
+                    const card = this.createShowCard(show, false)
                     this.viewElems.showsWrapper.appendChild(card)
                     this.showsSet = show;
                 })
@@ -196,7 +196,6 @@ setTimeout(this.hideMessage ,3000);
         this.viewElems.showsWrapper.style.display = "flex"
         this.viewElems.label1.style.display = "flex"
         this.viewElems.InputFields.style.display = "flex"
-        this.viewElems.keywords.style.display = "flex"
         this.viewElems.showPreview.innerHTML = ""
 };
  
@@ -207,8 +206,9 @@ closeDetailsView = event => { // changing view from details to general
     this.viewElems.showsWrapper.style.display = "flex"
     this.viewElems.label1.style.display = "flex"
     this.viewElems.InputFields.style.display = "flex"
-    this.viewElems.keywords.style.display = "flex"
     this.viewElems.showPreview.innerHTML = ""
+    this.viewElems.Favs.style.display = "flex"
+    this.viewElems.btnGroupDrop1.style.display = "flex"
 };
 
 openDetailsView = event => { // changing view from general to shows details
@@ -220,7 +220,8 @@ openDetailsView = event => { // changing view from general to shows details
         this.viewElems.showsWrapper.style.display = "none"
         this.viewElems.label1.style.display = "none"
         this.viewElems.InputFields.style.display = "none"
-        this.viewElems.keywords.style.display = "none"
+        this.viewElems.Favs.style.display = "none"
+        this.viewElems.btnGroupDrop1.style.display = "none"
         })
 };
 
@@ -289,10 +290,8 @@ if (isDetailed) {
     btn.addEventListener('click', this.closeDetailsView)
     btn.innerText = "Back"
     btn2.style.visibility = "visible"
-    btn2.style.left = "-50px"
     btn2.addEventListener('click', this.addToFav);
     btn3.style.visibility = "visible"
-    btn3.style.left = "40px"
     btn3.addEventListener('click', this.removeFav);
    
 } else {
