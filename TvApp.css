@@ -175,12 +175,12 @@ body {
     flex-direction: column;
     width: 40vw;
     top: 40vw;
-    left: 10vw;
+    left: 8vw;
 
   }
   .shows-wrapper .card { /* showCards */
-    width: 72vw;
-    height: 92vw;
+    width: 75vw;
+    height: 98vw;
     box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.3);
     margin: 3%;
   }
@@ -196,40 +196,42 @@ body {
     position:absolute;
     bottom:10px;
     left: 10px;
-    width: 100px;
-    height: 30px;
+    width: 120px;
+    height: 40px;
     background-color: rgb(56, 111, 212);
     color: rgb(251, 251, 253);
     word-wrap: break-word;
-    font-size: 2vw;
+    font-size: 3vw;
   }
   
   #favBtn { /*add to favs button*/
     position:absolute;
     bottom: 10px;
-    left: 110px;
-    width: 30px;
-    height: 30px;
+    left: 140px;
+    width: 40px;
+    height: 40px;
     background-color: white;
     color: blue;
     text-align: center;
+    justify-content: center;
     padding: 3px;
     word-wrap: wrap;
-    font-size: 2vw;
+    font-size: 3vw;
   }
 
   #fav2Btn { /*remove from favs button*/
     position: absolute;
     bottom: 10px;
-    left: 150px;
-    width: 30px;
-    height: 30px;
+    left: 190px;
+    width: 40px;
+    height: 40px;
     background-color: white;
     color: blue;
     text-align: center;
+     justify-content: center;
     padding: 3px;
     word-wrap: wrap;
-    font-size: 2vw;
+    font-size: 3vw;
   }
   #label1{
     font-size: 10vw;
