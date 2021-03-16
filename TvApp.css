@@ -175,11 +175,10 @@ body {
 
   .shows-wrapper {
     flex-direction: column;
-    width: 40vw;
-    top: 55vw;
-    left: 0vw;
-
+    width: 100%;
+    top: 53vw;
   }
+  
   .shows-wrapper .card { /* showCards */
     width: 90vw;
     height: 115vw;
@@ -189,8 +188,8 @@ body {
     transform: translate(-50%);
   }
   .card-img-top {
-    height: 45vw;
-    width: 65vw;
+    height: 50vw;
+    width: 70vw;
   }
   #InputFields {
     width: 70vw;
