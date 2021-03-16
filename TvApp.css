@@ -174,8 +174,8 @@ body {
   .shows-wrapper {
     flex-direction: column;
     width: 40vw;
-    top: 48vw;
-    left: 3vw;
+    top: 55vw;
+    left: 0vw;
 
   }
   .shows-wrapper .card { /* showCards */
