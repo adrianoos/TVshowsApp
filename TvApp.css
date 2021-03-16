@@ -168,13 +168,14 @@ body {
     position: absolute;
     align-items: center;
     justify-content: center;
-left: 0vw;
+    left: 50%;
+    transform: translate(-50%);
   }
 
   .shows-wrapper {
     flex-direction: column;
     width: 40vw;
-    top: 35vw;
+    top: 37vw;
     left: 8vw;
 
   }
