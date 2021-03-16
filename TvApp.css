@@ -16,6 +16,7 @@ body {
   transform: translate(-50%);
   left: 50%;
   transform: translate(-50%);
+  left: 43%;
   font-size: x-large;
   text-align: center;
   padding: 10px;
@@ -106,6 +107,7 @@ body {
   height: 38px;
   background-color: white;
   color: rgb(56, 111, 212);
+  
 }
 
 #fav2Btn { /*remove from favs button*/
@@ -116,6 +118,7 @@ body {
   height: 38px;
   background-color: white;
   color: rgb(56, 111, 212);
+  transform: translate(-50%);
 }
 
 #searchInput {
@@ -170,26 +173,28 @@ body {
     position: absolute;
     align-items: center;
     justify-content: center;
-  
   }
 
   .shows-wrapper {
     flex-direction: column;
     width: 100%;
-    top: 53vw;
+    top: 110%;
   }
-  
   .shows-wrapper .card { /* showCards */
-    width: 90vw;
-    height: 115vw;
+    top: 1vw;
+    left: -10vw;
+    width:100%;
+    height: 400px;
     box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.3);
-    margin: 4%;
-    left: 50%;
-    transform: translate(-50%);
+    margin: 0.5%;
   }
   .card-img-top {
-    height: 50vw;
-    width: 70vw;
+    height: 50%;
+    width: 100%;
+    border: 2px;
+    border-radius: 2px;
+    border-color: rgb(97, 97, 97);
+    border-style: double;
   }
   #InputFields {
     width: 70vw;
@@ -199,7 +204,7 @@ body {
     position:absolute;
     bottom:10px;
     left: 10px;
-    width: 120px;
+    width: 140px;
     height: 40px;
     background-color: rgb(56, 111, 212);
     color: rgb(251, 251, 253);
@@ -210,34 +215,29 @@ body {
   #favBtn { /*add to favs button*/
     position:absolute;
     bottom: 10px;
-    left: 140px;
+    left: 155px;
     width: 40px;
     height: 40px;
     background-color: white;
     color: blue;
     text-align: center;
-    justify-content: center;
     padding: 3px;
     word-wrap: wrap;
     font-size: 4vw;
+    justify-content: center;
   }
 
   #fav2Btn { /*remove from favs button*/
     position: absolute;
     bottom: 10px;
-    left: 190px;
+    left: 220px;
     width: 40px;
     height: 40px;
     background-color: white;
     color: blue;
     text-align: center;
-     justify-content: center;
     padding: 3px;
     word-wrap: wrap;
-    font-size: 4vw;
-  }
-  #label1{
-    font-size: 12vw;
   }
   
 };
