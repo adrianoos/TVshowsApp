@@ -47,7 +47,7 @@ body {
   margin-bottom: 1.5%;
   box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.3);
   margin: 0.5%;
-  min-width: 24%;
+  min-width: 18vw;
 }
 
 .show-preview {
@@ -85,40 +85,48 @@ body {
   color: aliceblue; 
   box-shadow:  5px 5px 20px rgb(151, 151, 151);
 }
-#Favs {
-  margin: 2px;
-}
 
-#showDet { /*add to favs button*/
+#showDet {
   position:absolute;
-  bottom: 10px;
-  left: -110px;
+  bottom:2vh;
+  left: 1vw;
+  width: 8vw;
+  height: 2.5vw;
   background-color: rgb(56, 111, 212);
   color: rgb(251, 251, 253);
-  margin-left: 120px;
+  word-wrap: break-word;
+  font-size: 1vw;
 }
 
 #favBtn { /*add to favs button*/
   position:absolute;
+  bottom: 2vh;
+  left: 9vw;
+  width: 3vw;
+  height: 2.5vw;
   background-color: white;
-  color: blue;
-  margin-left: 120px;
+  color: rgb(56, 111, 212);
 }
 
 #fav2Btn { /*remove from favs button*/
   position: absolute;
-  left: 100px;
-  bottom: 10px;
+  bottom: 2vh;
+  left: 12vw;
+  width: 3vw;
+  height: 2.5vw;
   background-color: white;
-  color: blue;
-  margin-left: 70px;
+  color: rgb(56, 111, 212);
 }
+
 #searchInput {
   box-shadow:  5px 5px 20px rgb(151, 151, 151);
 }
 #favbtns { /**/
   position: absolute;
- 
+}
+#btnGroupDrop1 {
+  align-items: center;
+  background-color: rgb(116, 129, 245);
 }
 
 
@@ -157,14 +165,24 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-  
+
+  .container {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+left: 1vw;
+  }
+
   .shows-wrapper {
     flex-direction: column;
     width: 40vw;
+    top: 28vw;
+    left: 2vw;
+
   }
   .shows-wrapper .card { /* showCards */
     width: 70vw;
-    height: 82vw;
+    height: 84vw;
     margin-bottom: 1.5%;
     box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.3);
     margin: 0.5%;
@@ -176,20 +194,41 @@ body {
   #InputFields {
     width: 70vw;
   }
-  .dropdown {
-    position: absolute;
-    top: 31vh;
-    left: 13vw;
-  }
-  #dropdownMenuButton {
-    box-shadow:  5px 5px 20px rgb(151, 151, 151);
-    position: absolute;
-    left: 14vw;
-    bottom: 1px;
-    height: 39px;
+
+  #showDet {
+    position:absolute;
+    bottom:2vh;
+    left: 1vw;
+    width: 14vw;
+    height: 4vw;
+    background-color: rgb(56, 111, 212);
+    color: rgb(251, 251, 253);
+    word-wrap: break-word;
+    font-size: 1.5vw;
   }
   
-  .shows-wrapper>* {
-    width: 100%;
+  #favBtn { /*add to favs button*/
+    position:absolute;
+    bottom: 2vh;
+    left: 15vw;
+    width: 5vw;
+    height: 4vw;
+    background-color: white;
+    color: blue;
+    text-align: center;
+    padding: 3px;
   }
+
+  #fav2Btn { /*remove from favs button*/
+    position: absolute;
+    bottom: 2vh;
+    left: 20vw;
+    width: 5vw;
+    height: 4vw;
+    background-color: white;
+    color: blue;
+    text-align: center;
+    padding: 3px;
+  }
+  
 };
