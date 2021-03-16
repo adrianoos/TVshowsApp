@@ -174,18 +174,18 @@ body {
   .shows-wrapper {
     flex-direction: column;
     width: 40vw;
-    top: 44vw;
-    left: 6vw;
+    top: 48vw;
+    left: 3vw;
 
   }
   .shows-wrapper .card { /* showCards */
-    width: 80vw;
-    height: 110vw;
+    width: 90vw;
+    height: 115vw;
     box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.3);
-    margin: 3%;
+    margin: 4%;
   }
   .card-img-top {
-    height: 40vw;
+    height: 45vw;
     width: 65vw;
   }
   #InputFields {
@@ -201,7 +201,7 @@ body {
     background-color: rgb(56, 111, 212);
     color: rgb(251, 251, 253);
     word-wrap: break-word;
-    font-size: 5vw;
+    font-size: 4.5vw;
   }
   
   #favBtn { /*add to favs button*/
@@ -216,7 +216,7 @@ body {
     justify-content: center;
     padding: 3px;
     word-wrap: wrap;
-    font-size: 5vw;
+    font-size: 4.5vw;
   }
 
   #fav2Btn { /*remove from favs button*/
@@ -231,10 +231,10 @@ body {
      justify-content: center;
     padding: 3px;
     word-wrap: wrap;
-    font-size: 5vw;
+    font-size: 4.5vw;
   }
   #label1{
-    font-size: 12vw;
+    font-size: 14vw;
   }
   
 };
