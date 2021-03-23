@@ -1,0 +1,243 @@
+body {
+  margin: 50px;
+}
+
+#popUp {
+  visibility: hidden;
+  height: auto;
+  width: auto;
+  background-color: rgb(116, 129, 245);
+  border: 3px;
+  border-color: rgb(116, 129, 245);
+  border-style: solid;
+  border-radius: 9px;
+  position:fixed;
+  top: 50%;
+  transform: translate(-50%);
+  left: 50%;
+  transform: translate(-50%);
+  left: 43%;
+  font-size: x-large;
+  text-align: center;
+  padding: 10px;
+  color: rgb(253, 253, 253);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.3);
+}
+
+.search-bar {
+  margin: 30px;
+  display: inline-flex;
+  margin: 20px;
+  justify-content: space-around;
+}
+
+.shows-wrapper {
+  position: absolute;
+  left: 10vw;
+  top:55vh;
+  max-width: 85%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.shows-wrapper .card { /* showCards */
+  width: 300px;
+  height: 600px;
+  box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.3);
+  margin: 5px;
+}
+
+.show-preview {
+  position: fixed;
+  left: 50%;
+  top: 5%;
+  display: none;
+  width: 90%;
+  max-width: 1100px;
+  height: 90%;
+  background: white;
+  transform: translate(-50%, 0);
+  z-index: 1;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+}
+
+.show-preview .card { 
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  
+}
+.show-preview .card-body { 
+  align-items: center;
+}
+
+.card-preview-bg {
+  width: 100%;
+  height: 45%;
+  background-position: center;
+  background-size: cover;
+}
+#searchButton {
+  background-color: rgb(116, 129, 245); 
+  color: aliceblue; 
+  box-shadow:  5px 5px 20px rgb(151, 151, 151);
+}
+
+#showDet {
+  position:absolute;
+  bottom:2vh;
+  left: 1vw;
+  width: 120px;
+  height: 38px;
+  background-color: rgb(56, 111, 212);
+  color: rgb(251, 251, 253);
+  word-wrap: break-word;
+  font-size: small
+}
+
+#favBtn { /*add to favs button*/
+  position:absolute;
+  bottom: 2vh;
+  left: 140px;
+  width: 38px;
+  height: 38px;
+  background-color: white;
+  color: rgb(56, 111, 212);
+  
+}
+
+#fav2Btn { /*remove from favs button*/
+  position: absolute;
+  bottom: 2vh;
+  left: 185px;
+  width: 38px;
+  height: 38px;
+  background-color: white;
+  color: rgb(56, 111, 212);
+  transform: translate(-50%);
+}
+
+#searchInput {
+  box-shadow:  5px 5px 20px rgb(151, 151, 151);
+}
+#favbtns { /**/
+  position: absolute;
+}
+#btnGroupDrop1 {
+  align-items: center;
+  background-color: rgb(116, 129, 245);
+}
+
+
+.form-control {
+  width: 1vw;
+}
+
+#label1 {
+  position: relative;
+  font-family: fantasy;
+  font-size: 8vw;
+  color: rgb(116, 129, 245);
+  text-shadow: 5px 5px 20px rgb(151, 151, 151);
+  transition-duration: 1s;
+  transition-property: all;
+}
+#square {
+  position: absolute;
+  height: 40vw;
+  width: 40vw;
+  top: -20vw;
+  left: -10vw;
+  opacity: 1;
+  border-radius: 0%;
+  border-style: double;
+  border-color: rgb(243, 241, 241);
+  border-width: 120px;
+  animation: rotation 120s linear infinite;
+  overflow: hidden;
+}
+
+@keyframes rotation {
+0%{transform: rotate(0deg);}
+90%{transform: rotate(60deg);}
+100%{transform: rotate(360deg);}
+}
+
+@media screen and (max-width: 450px) { /*MOBILE SECTION*/
+
+  .container {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .shows-wrapper {
+    flex-direction: column;
+    width: 100%;
+    top: 110%;
+  }
+  .shows-wrapper .card { /* showCards */
+    top: 1vw;
+    left: -10vw;
+    width:100%;
+    height: 480px;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.3);
+    margin: 0.5%;
+  }
+  .card-img-top {
+    height: 67%;
+    width: 100%;
+    border: 2px;
+    border-radius: 2px;
+    border-color: rgb(97, 97, 97);
+    border-style: double;
+  }
+  #InputFields {
+    width: 70vw;
+  }
+
+  #showDet {
+    position:absolute;
+    bottom:10px;
+    left: 10px;
+    width: 140px;
+    height: 40px;
+    background-color: rgb(56, 111, 212);
+    color: rgb(251, 251, 253);
+    word-wrap: break-word;
+    font-size: 4vw;
+  }
+  
+  #favBtn { /*add to favs button*/
+    position:absolute;
+    bottom: 10px;
+    left: 155px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    color: blue;
+    text-align: center;
+    padding: 3px;
+    word-wrap: wrap;
+    font-size: 4vw;
+    justify-content: center;
+  }
+
+  #fav2Btn { /*remove from favs button*/
+    position: absolute;
+    bottom: 10px;
+    left: 220px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    color: blue;
+    text-align: center;
+    padding: 3px;
+    word-wrap: wrap;
+  }
+  
+};
